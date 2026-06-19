@@ -1,0 +1,16 @@
+#import flask class from flask mosule
+from flask import Flask
+
+#create a server using  Flask
+server = Flask(__name__)
+
+@server.get('/')
+def homepage():
+    return "This is a homepage"
+@server.get('/welcome')
+def welcome():
+    return "this is a welcome page"
+
+
+#run the server
+server.run()
